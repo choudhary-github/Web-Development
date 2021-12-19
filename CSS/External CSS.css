@@ -1,0 +1,6 @@
+  h1 {
+    color: blue;
+  }
+  p {
+    color: red;font-family: 'Courier New', Courier, monospace;border: 2px solid black;padding: 10px;margin: 10px;
+  }
