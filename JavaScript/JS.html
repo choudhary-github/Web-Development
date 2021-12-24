@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>My First JavaScript</h1>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+<p id="demo"></p>
+<hr>
+<h2>Print Hello using JavaScript</h2>
+<p id="test"></p>
+<script>
+    document.getElementById('test').innerHTML="Hello JavaScript";
+</script>
+<hr>
+<p>JavaScript can change the content of an HTML element:</p>
+<button type="button" oneclick="myfunction()">Click me</button>
+<p id="demos">this is a demo</p>
+<script>
+    function myfunction(){
+        document.getElementById("demos").innerHTML="Hello JavaScript!";
+    }
+</script>
+</body>
+</html>
