@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Lists</title>
+    <style>
+            div.a ul{
+                margin: 0;padding: 10px 20px;
+                border-left: 5px solid red;
+                list-style-type: none;
+                background-color: #f1f1f1;
+            }
+            div li{
+                padding: 1px;
+                
+            }
+    </style>
 </head>
 <body>
     <h2>the list-style-type Property</h2>
@@ -45,5 +57,23 @@
         <li>Tea</li>
         <li>Coca Cola</li>
     </ul>
+    <!-- This is shorthand property -->
+    <ul style="list-style: square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <ul id="a" style="background-color: #ff9999;padding: 20px;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <div class="a">
+        <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+        </ul>
+    </div>
 </body>
 </html>
