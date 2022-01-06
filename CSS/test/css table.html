@@ -7,13 +7,12 @@
     <title>CSS Table</title>
     <style>
         table,th,td{
-            border: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
         table{
             text-align: center;
             float: right;
             width: 50%;
-            background-color: powderblue;
             border-collapse: collapse;
         }
         td{
@@ -25,6 +24,13 @@
             background-color: white;
             height: 70px;
         }
+        tr:hover{
+            background-color: yellow;
+        }
+        td:hover{
+            background-color: wheat;
+        }
+        tr:nth-child(even){background-color: #f2f2f2;}
     </style>
 </head>
 <body>
@@ -39,6 +45,10 @@
         </tr>
         <tr>
             <td>Lois</td>
+            <td>Griffin</td>
+        </tr>
+        <tr>
+            <td>John</td>
             <td>Griffin</td>
         </tr>
     </table>
