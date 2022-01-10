@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment</title>
     <style>
-        p:first-child{
+        /* p:first-child{
             color: blue;
+        } */
+        p::first-line{
+            color: #0000ff;
+            font-variant:small-caps ;
+        }
+        p::first-letter{
+            color: #ff0000;
+            font-size: xx-large;
+            line-height: 80%;
+        }
+        .list li::marker{
+            color: red;
+            font-size: 25px;
         }
     </style>
 </head>
@@ -17,6 +30,21 @@
     <div>
         <p>this is paragraph.</p>
         <p>this is paragraph.</p>
+    </div><hr>
+    <div class="a">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, repellat culpa modi ullam asperiores sit iure, quisquam error voluptatibus officiis necessitatibus est eos labore doloribus quaerat nobis suscipit ducimus molestiae?</p>
+    </div><hr>
+    <div class="list">
+        <ul>
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
     </div>
 </body>
 </html>
