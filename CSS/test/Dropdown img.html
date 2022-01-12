@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <style>
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .content{
+            display: block;
+        }
+        .details{
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Img</h1>
+    <div class="dropdown">
+        <img src="/test/media/Cinque Terre.jpg" alt="Cinque Terre" width="120">
+        <div class="content">
+            <img src="/test/media/Cinque Terre.jpg" alt="Cinque Terre" width="400">
+            <div class="details">Beautiful Cinque Terre</div>
+        </div>
+    </div>
+
+</body>
+</html>
