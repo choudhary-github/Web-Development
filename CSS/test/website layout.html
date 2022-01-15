@@ -30,6 +30,23 @@
             background-color: #ddd;
             color: black;
         }
+        .column p{
+            float: left;
+            width: 33.3%;
+            /* text-align: center; */
+            /* border: 1px solid #ddd; */
+            padding: 15px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .footer{
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -40,6 +57,19 @@
         <a href="#link">Link</a>
         <a href="#link">Link</a>
         <a href="#link">Link</a>
+    </div>
+    <div class="row">
+    <div class="column">
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum illo distinctio temporibus quaerat, voluptatibus quo incidunt nulla magni eius esse et modi! Vitae veritatis accusantium modi tenetur magnam adipisci!</p>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse reiciendis nam dolores temporibus nulla rem eos neque! Dolore maxime laudantium voluptatem accusantium tempora, fuga a dolorum, voluptas magnam, quaerat mollitia!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam ducimus sunt, inventore quaerat vero quasi illo molestiae minima hic eos facilis excepturi aperiam aut blanditiis maxime, dolorum tempora vel error!
+        </p>
+    </div></div>
+    <div class="footer">
+        Footer
     </div>
 </body>
 </html>
