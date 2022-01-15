@@ -21,6 +21,14 @@
         counter-increment: subsection;
         content: counter(section)"." counter(subsection)" ";
     }
+    ol{
+        counter-reset: section;
+        list-style-type: none;
+    }
+    li::before{
+        counter-increment: section;
+        content: counters(section,".")" ";
+    }
     </style>
 </head>
 <body>
@@ -35,20 +43,27 @@
     <hr>
     <ol>
         <li>list</li>
-        <li>list</li>
-        <ol>
-            <li>list</li>
-            <li>list</li>
-            <li>list</li>
+        <li>list
             <ol>
                 <li>list</li>
                 <li>list</li>
                 <li>list</li>
+                <li>list
+                    <ol>
+                        <li>list</li>
+                        <li>list</li>
+                    </ol>
+                </li>
+                <li>list</li>
             </ol>
-        <ol>
-            <li>list</li>
-        </ol>
-        </ol>
+        </li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ol>
+    <ol>
+        <li>list</li>
+        <li>list</li>
     </ol>
 </body>
 </html>
