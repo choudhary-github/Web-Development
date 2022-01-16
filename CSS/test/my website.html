@@ -38,26 +38,40 @@
             background-color: #ddd;
             color: black;
         }
-        .title{
-            width: 65%;
-            background-color: white;
-            padding: 10px 13px;
-            margin-top: 15px;
-            border-radius: 5px;
+        .left{
             float: left;
+            width: 75%;
+            padding-top: 20px;
         }
-        .img1{
-            background-color: #ccc;
-            height: 150px;
-            padding: 25px;
+        .title{
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0px;
+        }
+        .fakeimage{
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+        .right{
+            float: right;
+            width: 25%;
+            padding: 20px;
         }
         .side{
-            width: 34%;
-            float: right;
             background-color: white;
-            margin-top: 15px;
-            border-radius: 5px;
-            padding: 10px 15px;
+            padding: 15px;
+            margin: 15px 0px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .footer{
+            text-align: center;
+            padding: 20px;
+            background-color: #aaa;
         }
     </style>
 </head>
@@ -71,24 +85,39 @@
         <a href="#link">Link</a>
         <a href="#link" style="float: right;">Link</a>
     </div>
-    <div class="title">
-        <h3>TITLE HEADING</h3>
-        <p>Title description, Dec 7. 2017</p>
-        <p class="img1">Image</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, harum! Delectus saepe molestias ipsum consectetur, nisi aspernatur ad aut sit? Repellat, quis! Sapiente pariatur ut, est accusamus repellat voluptas consequatur?</p>
+    <div class="row">
+    <div class="left">
+        <div class="title">
+            <h3>TITLE HEADING</h3>
+            <p class="fakeimage" style="height: 200px;">Image</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, reiciendis beatae. Porro enim commodi explicabo a obcaecati. Tenetur laborum odio laboriosam et itaque animi. Voluptatem repellat dolorem voluptas enim quibusdam!</p>
+        </div>
+        <div class="title">
+            <h3>TITLE HEADING</h3>
+            <p class="fakeimage" style="height: 200px;">Image</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum unde magnam delectus libero quia commodi obcaecati rem, dolore voluptatibus consequuntur dolorem asperiores perspiciatis sed eos atque ipsam fugit minus iusto.</p>
+        </div>
     </div>
-    <div class="side">
-        <h3>About me</h3>
-        <p class="img1">Image</p>
+    <div class="right">
+        <div class="side">
+            <h3>About Me</h3>
+            <p class="fakeimage" style="height: 150px;">Image</p>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+        </div>
+        <div class="side">
+            <h3>Popular Post</h3>
+            <div class="fakeimage" style="height: 50px;">Image</div>
+            <div class="fakeimage" style="height: 50px;">Image</div>
+            <div class="fakeimage" style="height: 50px;">Image</div>
+        </div>
+        <div class="side">
+            <h3>Follow Me</h3>
+            <p>Some Text..</p>
+        </div>
     </div>
-    <div class="title">
-        <h3>TITLE HEADING</h3>
-        <p>Title description, Sep 2. 2017</p>
-        <p class="img1">Image</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam praesentium voluptates, in dolore illum inventore voluptatem sequi placeat porro quia alias, repudiandae vel obcaecati repellat quibusdam quo eius. Fugiat, soluta!</p>
     </div>
-    <div>
-        
+    <div class="footer">
+        <h2>Footer</h2>
     </div>
 </body>
 </html>
