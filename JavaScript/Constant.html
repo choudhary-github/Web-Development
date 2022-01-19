@@ -20,5 +20,17 @@
         // display the Array:
         document.getElementById("demo").innerHTML = cars;
      </script>
+     <hr>
+     <h2>Constant Objet</h2>
+     <p>You can change the properties of a constant object:</p>
+     <p id="obj"></p>
+     <script>
+         const caro = {type:"Fiat",model:"500",color:"white"};
+         // changing the property
+         caro.color = "red";
+         // adding a property
+         caro.owner = "John"
+         document.getElementById("obj").innerHTML = "The car owner is " + caro.owner;
+     </script>
 </body>
 </html>
