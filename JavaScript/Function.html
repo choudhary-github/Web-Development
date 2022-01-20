@@ -19,11 +19,12 @@
     <hr>
     <h2>Converting Celsius to Fahrenheit:</h2>
     <p>Celsius = 25</p>
-    <p class="demo"></p>
+    <p id="demom"></p>
     <script>
         function toFahrenheit(Celsius){
-
+            return (Celsius*1.8)+32;
         }
+        document.getElementById("demom").innerHTML = "The temperature is "+ toFahrenheit(25) + " Fahrenheit.";
     </script>
 </body>
 </html>
