@@ -15,5 +15,14 @@
             document.getElementById("demo").innerHTML = text.replace(/Microsoft/g,"W3Schools");
         }
     </script>
+    <hr>
+    <p id="demos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique corrupti doloremque atque mollitia nostrum veritatis aut perspiciatis eligendi laudantium amet, molestias, voluptate earum dolores veniam impedit. Nostrum, dolores pariatur?</p>
+    <button onclick="myfunction()">Upper Case</button>
+    <script>
+        let txt = document.getElementById("demos").innerHTML;
+        function myfunction(){
+            document.getElementById("demos").innerHTML = txt.toUpperCase();
+        }
+    </script>
 </body>
 </html>
