@@ -37,6 +37,16 @@
         let v = "Hello";
         let s = v.split("");
         document.getElementById("split").innerHTML = s;
+    </script><hr>
+    <p id="str"></p>
+    <script>
+        let textt = "Hello";
+        const myarr = textt.split("");
+        textt = "";
+        for (let i=0; i < myarr.length; i++){
+            textt += myarr[i] + "<br>"
+        }
+        document.getElementById("str").innerHTML = textt ;
     </script>
 </body>
 </html>
