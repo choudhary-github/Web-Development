@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search</title>
+</head>
+<body>
+    <strong>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</strong>
+    <p id="abc"></p>
+    <script>
+        let str = "Please locate where 'locate' occurs!";
+        document.getElementById("abc").innerHTML = "First occurrence of locate in index of : " + str.indexOf("locate") + ", "+ str.indexOf("john");
+    </script><hr>
+    <p id="a"></p>
+    <script>
+        let strr = "Please locate where 'locate' occurs!";
+        document.getElementById("a").innerHTML = strr.lastIndexOf("locate") +" , "+strr.indexOf("john");
+    </script>
+</body>
+</html>
