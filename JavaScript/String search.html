@@ -29,5 +29,22 @@
         document.getElementById("both").innerHTML = textt;
         document.getElementById("both1").innerHTML = new_text.lastIndexOf("locate",15);
     </script><hr>
+    <p id="az"></p>
+    <script>
+        let strns = "Please locate where 'locate' occurs!";
+        document.getElementById("az").innerHTML = strns.search("locate");
+    </script><hr>
+    <p id="aj"></p>
+    <script>
+        let smt = "Please Locate where 'locate' occurs!";
+        document.getElementById("aj").innerHTML = smt.match(/locate/gi)
+    </script><hr>
+    <div>
+        <p id="str"></p>
+        <script>
+            let text = "Hello world, welcome to the universe.";
+            document.getElementById("str").innerHTML = text.includes("world") + "<br>" + text.includes("pom");
+        </script>
+    </div>
 </body>
 </html>
