@@ -14,19 +14,30 @@
 .player{
     transform: translateY(200px);
     background-color: blue;
+    animation: move 4s infinite linear;
+    animation-play-state: paused;
 }
 .enemy{
     margin-left: 100px;
     background-color: orangered;
-    transition-timing-function: linear;
-    animation-name: bounce;
-    animation-iteration-count: infinite;
+    animation: bounce infinite linear;
 }
 .enemy.one{
-    animation-duration: 2s; 
+    animation-duration: 3s; 
+}
+.enemy.two{
+    animation-duration: 5s;
+}
+.game:active .player{
+    animation-play-state:running;
 }
 @keyframes  bounce{
     50%{
         transform: translateY(450px);
+    }
+}
+@keyframes move{
+    50%{
+        transform:translateY(200px) translateX(450px);
     }
 }
