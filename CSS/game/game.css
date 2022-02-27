@@ -19,7 +19,14 @@
     margin-left: 100px;
     background-color: orangered;
     transition-timing-function: linear;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+}
+.enemy.one{
+    animation-duration: 2s; 
 }
 @keyframes  bounce{
-    50%
+    50%{
+        transform: translateY(450px);
+    }
 }
