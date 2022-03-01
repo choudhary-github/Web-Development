@@ -7,11 +7,11 @@
     /* to give direction to the row */
     flex-direction: row;
     /* how items within a row are aligned in order */
-    justify-content:center;
-    /* to align the item */
+    justify-content:space-around;
+    /* align items within the row perpendicularly */
     align-items:flex-start;
-    
-    align-content:space-between;
+    /* how all the rows togather are aligned */
+    align-content:center;
     
 }
 
@@ -22,4 +22,5 @@
     display: inline-flex;
     margin: 15px;
     background-color: darkcyan;
+    text-align: center;
 }
