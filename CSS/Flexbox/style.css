@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     /* to give direction to the row */
     flex-direction: row;
-    /* to justify the alignment of the content */
+    /* how items within a row are aligned in order */
     justify-content:center;
     /* to align the item */
     align-items:flex-start;
