@@ -1,0 +1,25 @@
+.container{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    background-color: lightcoral;
+    flex-wrap: wrap;
+    /* to give direction to the row */
+    flex-direction: row;
+    /* to justify the alignment of the content */
+    justify-content:center;
+    /* to align the item */
+    align-items:flex-start;
+    
+    align-content:space-between;
+    
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    border: 1px dotted black;
+    display: inline-flex;
+    margin: 15px;
+    background-color: darkcyan;
+}
