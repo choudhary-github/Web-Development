@@ -9,7 +9,6 @@
     overflow: hidden;
 }
 .course{
-    /* background-color: #0f0f0f0f; */
     height: 350px;
     width: 33.33%;
     display: block;
@@ -74,4 +73,9 @@
     font-size: 12px;
     font-family: sans-serif;
     line-height: 2;
+}
+@media(max-width:500){
+    .container{
+        width: 40%;
+    }
 }
