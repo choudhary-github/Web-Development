@@ -74,8 +74,3 @@
     font-family: sans-serif;
     line-height: 2;
 }
-@media(max-width:500){
-    .container{
-        width: 40%;
-    }
-}
