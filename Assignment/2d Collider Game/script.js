@@ -28,9 +28,12 @@ let player = new Player()
 let e1 = new Enemy()
 let e2 = new Enemy
 e1.x = 120
-e2.x = 320
+e2.x = 320 
 
 function drawBox(box){
     context.fillStyle = box.color
     context.fillRect(box.x,box.y,box.size,box.size)
 }
+drawBox(player)
+drawBox(e1)
+drawBox(e2)

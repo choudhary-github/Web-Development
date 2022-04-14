@@ -2,3 +2,7 @@
     margin: 10px;
     border: dotted 1px black;
 }
+
+.player{
+    animation: infinite;
+}
