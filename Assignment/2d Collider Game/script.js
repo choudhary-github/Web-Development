@@ -19,8 +19,9 @@ class Player extends Box{
 }
 
 class Enemy extends Box{
-    constructor(){
+    constructor(speed){
         super(50,'red')
+        this.speed = speed
     }
 }
 
