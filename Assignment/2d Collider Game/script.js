@@ -23,18 +23,36 @@ class Enemy extends Box{
         super(50,'red')
         this.speed = speed
     }
+    move(){
+        this.y += this.speed
+        if (this.y + this.size > 500){
+            this.speed = -(Math.abs(this.speed))
+        }
+        if (this.y < 0){
+            this.speed = Math.abs(this.speed)
+        }
+    }
 }
 
 let player = new Player()
-let e1 = new Enemy()
-let e2 = new Enemy
+let e1 = new Enemy(1)
+let e2 = new Enemy(2)
 e1.x = 120
-e2.x = 320 
+e2.x = 300 
 
 function drawBox(box){
     context.fillStyle = box.color
     context.fillRect(box.x,box.y,box.size,box.size)
 }
-drawBox(player)
-drawBox(e1)
-drawBox(e2)
+function updateGame(){
+    window.requestAnimationFrame(() => {
+    // console.log('frame updated')
+    context.clearRect(0,0,500,500)
+    e1.move()
+    e2.move()
+    drawBox(e1)
+    drawBox(e2)
+    updateGame()
+})
+}
+updateGame()
