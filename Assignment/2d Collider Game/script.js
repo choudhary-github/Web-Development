@@ -35,24 +35,26 @@ class Enemy extends Box{
 }
 
 let player = new Player()
-let e1 = new Enemy(1)
-let e2 = new Enemy(2)
-e1.x = 120
-e2.x = 300 
+let e1 = new Enemy(2)
+let e2 = new Enemy(4)
+let e3 = new Enemy(6)
+e1.x = 100
+e2.x = 233 
+e3.x = 366
 
 function drawBox(box){
     context.fillStyle = box.color
     context.fillRect(box.x,box.y,box.size,box.size)
 }
 function updateGame(){
-    window.requestAnimationFrame(() => {
-    // console.log('frame updated')
     context.clearRect(0,0,500,500)
     e1.move()
     e2.move()
+    e3.move()
     drawBox(e1)
     drawBox(e2)
-    updateGame()
-})
+    drawBox(e3)
+    drawBox(player)
+    window.requestAnimationFrame(updateGame)
 }
 updateGame()
