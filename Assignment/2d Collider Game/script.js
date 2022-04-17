@@ -1,6 +1,8 @@
 let gamebox = document.getElementById("gamebox")
 let context = gamebox.getContext('2d')
 
+let gameon = true
+
 class Box{
     constructor (size,color){
         this.size = size
@@ -15,9 +17,18 @@ class Player extends Box{
         super(50,'blue')
         this.x = 0
         this.y = 225
+        this.speed = 0
+    }
+    move(){
+        this.x += this.speed
+        if(this.x + this.size > 500){
+            this.speed = -(Math.abs(this.speed))
+        }
+        if(this.x == 0){
+            this.speed = Math.abs(this.speed)
+        }
     }
 }
-
 class Enemy extends Box{
     constructor(speed){
         super(50,'red')
@@ -34,6 +45,13 @@ class Enemy extends Box{
     }
 }
 
+gamebox.addEventListener('mousedown',function(){
+    player.speed = 2
+})
+gamebox.addEventListener('mouseup',function(){
+    player.speed = 0
+})
+
 let player = new Player()
 let e1 = new Enemy(2)
 let e2 = new Enemy(4)
@@ -47,10 +65,12 @@ function drawBox(box){
     context.fillRect(box.x,box.y,box.size,box.size)
 }
 function updateGame(){
+    if(!gameon) return
     context.clearRect(0,0,500,500)
     e1.move()
     e2.move()
     e3.move()
+    player.move()
     drawBox(e1)
     drawBox(e2)
     drawBox(e3)
