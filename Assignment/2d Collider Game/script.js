@@ -86,7 +86,7 @@ function colliding(){if (
 }
 
 function updateGame(){
-    if(!gameon) return(window.alert('Game Over : \nPlease restart the Page'))
+    if (!gameon) return(window.alert('Game Over : \nPlease restart the Page'))
     context.clearRect(0,0,500,500)
     e1.move()
     e2.move()
