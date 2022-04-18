@@ -23,7 +23,7 @@ console.log(String.prototype)
 Array.prototype.joinOriginal = Array.prototype.join
 
 Array.prototype.join = function() {
-    console.log('join called on', this)  //this prefer to 
+    console.log('join called on', this)  // here this prefer to 'Array'.
     return this.joinOriginal(...arguments)
 }
 
