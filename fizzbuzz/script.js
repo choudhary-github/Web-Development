@@ -1,22 +1,22 @@
 let inputBlank = document.getElementById('inputBlank')
 let btnPrint = document.getElementById('btnPrint')
-let oList = document.getElementById('oList')
+let uList = document.getElementById('uList')
 
 btnPrint.onclick = function(){
     let start = Date.now()
-    var x = Number(inputBlank.value)
+    var x = parseInt(inputBlank.value)
     for(i = 1; i <= x; i++){
         if(i % 3 == 0 && i % 5 == 0){
-            oList.innerHTML += '<li>' + 'FizzBuzz' + '</li>'}
+            uList.innerHTML += '<li>' + 'FizzBuzz' + '</li>'}
         else if(i % 3 == 0 ){
-            oList.innerHTML += '<li>' + 'Fizz' + '</li>'
+            uList.innerHTML += '<li>' + 'Fizz' + '</li>'
         }
         else if(i % 5 == 0){
-            oList.innerHTML += '<li>' + 'Buzz' + '</li>'
+            uList.innerHTML += '<li>' + 'Buzz' + '</li>'
         }
         else{
-            oList.innerHTML += '<li>' + i + '</li>'
+            uList.innerHTML += '<li>' + i + '</li>'
         }
     }
-    console.log('time taken',Date.now()-start)
+    console.log('time taken',Date.now() - start)
 }
