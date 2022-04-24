@@ -3,6 +3,7 @@ let btnPrint = document.getElementById('btnPrint')
 let oList = document.getElementById('oList')
 
 btnPrint.onclick = function(){
+    let start = Date.now()
     var x = Number(inputBlank.value)
     for(i = 1; i <= x; i++){
         if(i % 3 == 0 && i % 5 == 0){
@@ -17,4 +18,5 @@ btnPrint.onclick = function(){
             oList.innerHTML += '<li>' + i + '</li>'
         }
     }
+    console.log('time taken',Date.now()-start)
 }
