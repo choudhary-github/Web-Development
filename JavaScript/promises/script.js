@@ -1,11 +1,39 @@
-function fakeDownload(done){
-    setTimeout(function(){
-        let downloadData = 'Some data we ripped of the interwebs'
-        done(downloadData)
-    }, 1000);
-}
+function fakeDownload(correct){
+    return new Promise((resolve,reject)=>{
 
-fakeDownload(function(data){
-    console.log('we download a file, which had this data -->')
-    console.log(data)
+        let downloadedData = "Some data from the internet"
+        
+        setTimeout(()=>{
+            if(correct){
+                console.log("Downloading is in process")
+                resolve(downloadedData)
+            }
+            else{
+                reject(new Error("could not download file"))
+            }
+        },1000)
+    })
+}
+let downloaded = fakeDownload(true)
+
+downloaded.catch((err)=>{
+    console.log(err)
 })
+
+setTimeout(()=>{
+    downloaded.then((data)=>{
+        console.log("downloading data through internet ---->")
+        setTimeout(()=>{
+            console.log(data)
+        },1000)
+    })
+},3000)
+
+
+
+// fakeDownload(true).then((data)=>{
+//     console.log('downloading data through internet ---->')
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
