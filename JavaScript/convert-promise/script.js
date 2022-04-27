@@ -1,7 +1,10 @@
 let inpBox = document.getElementById("inpBox")
 let waitBtn = document.getElementById("waitBtn")
+let cancel = document.getElementById("cancel")
+cancel.style.display = "none"
 let n = inpBox.value
 function waiting(){
+    cancel.style.display = "inline"
     let timeout = inpBox.value
     return new Promise((resolve,reject) =>{
        if(isNaN(timeout)){
