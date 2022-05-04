@@ -20,7 +20,7 @@ function resize(fileName){
     else{
       console.log('Start resizing');
       setTimeout(()=>{
-        let resizedFile = fileName.split('.')[0] + '_resized.png'
+        let resizedFile = fileName.split('.')[0] + '_resized.jpg'
       resolve(resizedFile)
       },3000)
     }
