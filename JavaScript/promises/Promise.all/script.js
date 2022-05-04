@@ -20,7 +20,7 @@ function download(url) {
       else{
         console.log('Start resizing');
         setTimeout(()=>{
-          let resizedFile = fileName.split('.')[0] + '_resized.png'
+          let resizedFile = fileName.split('.')[0] + '_resized.jpg'
         resolve(resizedFile)
         },3000)
       }
@@ -29,7 +29,7 @@ function download(url) {
   
   function upload(resizedFile){
     return new Promise((resolve,reject)=>{
-      console.log('Preparing your download\n');
+      console.log('Preparing your download');
       setTimeout(()=>{
         let uploadedlink = 'http//www.upload.com/'+ resizedFile
         resolve(uploadedlink)
@@ -40,7 +40,16 @@ function download(url) {
   Promise.all([
       download('http//pic.in/mypic1.jpg'),
       download('http//pic.in/mypic2.jpg'),
-      download('http//pic.in/mypic3.jpg\n')
-  ]).then((values)=>{
-    console.log(values)
-  }).then(resize)
+      download('http//pic.in/mypic3.jpg')
+  ])
+  .then((downloadValue)=>{
+    // console.log(downloadValue)
+    return Promise.all(downloadValue.map(resize))
+  }).then((resizedValue)=>{
+    // console.log(resizedValue)
+    return Promise.all(resizedValue.map(upload))
+  }).then((uploadedlink)=>{
+    console.log(uploadedlink.toString());
+  }).catch((err)=>{
+    console.error(err);
+  })
