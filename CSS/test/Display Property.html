@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        li{
+            display: inline;
+            padding: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        h1.hidden{
+            display: none;
+        }
+        /* #b{
+            visibility: hidden;
+        } */
+        button{
+            width:auto
+        }
+         #hide{
+            display: none; 
+        }
+        #show, #hide{
+            background-color: green;
+            width: 50%;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            padding:5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">Html</a></li>
+        <li><a href="">Css</a></li>
+        <li><a href="">Javascript</a></li>
+    </ul>
+    <hr>
+    <h1 class="hidden">This is hidden element.</h1>
+    <p>above headline is hidden without taking any space.</p><hr>
+    <div id="a"><h1>This is hidden element.</h1>
+    <p>above headline is hidden with taking space.</p>
+    <button onclick="changeVisibility()">hide</button></div>
+    <button onclick="resetElement()">reset</button>
+    <script>
+        function changeVisibility(){
+            document.getElementById("a").style.visibility = "hidden"
+        }
+        function resetElement(){
+            document.getElementById("a").style.visibility="visible"
+        }
+    </script>
+    <hr>
+    <p id="show" onclick="visible()">click here to show more.</p>
+    <div id="hide">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis saepe recusandae maxime ad at possimus. Porro tenetur blanditiis, libero, iusto repellat perferendis cupiditate delectus totam maiores voluptate sint explicabo repudiandae!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde eum earum mollitia debitis iste? Asperiores fugit reprehenderit, rem eum nobis aut aliquam eius quia libero maxime quis, consequuntur modi.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, reiciendis? Sapiente odio officiis harum, deleniti impedit ab a aperiam, facilis veniam, vero omnis excepturi fugiat rerum vel mollitia dignissimos deserunt.</p>
+    </div>
+    <script>
+        function visible(){
+            document.getElementById("hide").style.display="block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPage</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .header, .footer{
+            background-color: grey;
+            color: white;
+            padding: 15px;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            margin: 8px;
+            padding: 8px;
+            background-color: #33b5e5;
+            color: #ffffff;
+        }
+        .menu{
+            width: 25%;
+        }
+        .about{
+            width: 75%;
+        }
+        .content{
+            float: left;
+            padding: 15px;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        li:hover{
+            background-color: #0099cc;
+        }
+        span{
+            width: 0.7em;
+            font-size: 400%;
+            font-family:'Courier New', Courier, monospace;
+            line-height:80%;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Chania</h1>
+    </div>
+    <div class="clearfix">
+        <div class="menu content">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+        <div class="about content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+        </div>
+    </div>
+    <div class="footer">
+    <footer>Footer Text</footer>
+    </div>
+    <hr>
+    <h2 style="margin-top: 10px;">Style the first letter of a paragraph and let it float left</h2>
+    <p><span>H</span>ere, the first letter of this text is embedded in a span element. The span element has a width that is 0.7 times the size of the current font. The font-size of the span element is 400% (quite large) and the line-height is 80%. The font of the letter in the span will be in "Algerian".</p>
+</body>
+</html>

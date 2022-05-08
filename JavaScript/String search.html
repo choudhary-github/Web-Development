@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Search</title>
+</head>
+<body>
+    <strong>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</strong>
+    <p id="abc"></p>
+    <script>
+        let str = "Please locate where 'locate' occurs!";
+        document.getElementById("abc").innerHTML = "First occurrence of locate in index of : " + str.indexOf("locate") + ", "+ str.indexOf("john");
+    </script><hr>
+    <p id="a"></p>
+    <script>
+        let strr = "Please locate where 'locate' occurs!";
+        document.getElementById("a").innerHTML = strr.lastIndexOf("locate") +" , "+strr.indexOf("john");
+    </script><hr>
+    <strong>Both methods accept a second parameter as the starting position for the search:</strong>
+    <p>indexOf</p>
+    <p>lastIndexOf</p>
+    <p id="both"></p>
+    <p id="both1"></p>
+    <script>
+        let new_text = "Please locate where 'locate' occurs!";
+        let textt = new_text.indexOf("locate",1);
+        document.getElementById("both").innerHTML = textt;
+        document.getElementById("both1").innerHTML = new_text.lastIndexOf("locate",15);
+    </script><hr>
+    <p id="az"></p>
+    <script>
+        let strns = "Please locate where 'locate' occurs!";
+        document.getElementById("az").innerHTML = strns.search("locate");
+    </script><hr>
+    <p id="aj"></p>
+    <script>
+        let smt = "Please Locate where 'locate' occurs!";
+        document.getElementById("aj").innerHTML = smt.match(/locate/gi)
+    </script><hr>
+    <div>
+        <p id="str"></p>
+        <script>
+            let text = "Hello world, welcome to the universe.";
+            document.getElementById("str").innerHTML = text.includes("world") + "<br>" + text.includes("pom");
+        </script>
+    </div>
+    <input type="text", placeholder="abcd">
+</body>
+</html>

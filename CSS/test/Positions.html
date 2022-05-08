@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        #static{
+            border: 3px solid #73ad21;
+            position: static;
+        }
+        #relative{
+            border: 3px solid #73ad21;
+            position: relative;
+            left: 30px;
+            height: 400px;
+            width: 400px;
+        }
+        #fixed{
+            border: 3px solid #73ad21;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: auto;
+        }
+        #absolute{
+            position: absolute;
+            border: 3px solid #73ad21;
+            top: 200px;
+            left: 50px;
+            /* width:100px; */
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position Static:</h2>
+    <p id="static">this paragraph is in static position:</p><hr>
+    <h2>Position Relative:</h2>
+    <p id="relative">this paragraph is in relative position:</p><hr>
+    <h2>Position Fixed:</h2>
+    <p id="fixed">this paragraph is in fixed position:</p><hr>
+    <h2>Position Absolute:</h2>
+    <p id="absolute">this paragraph is in absolute position:</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul{
+    color: blueviolet;
+}
+ul li li{
+    color: red;
+}
+ul li li li{
+    color: aqua;
+}
+div{
+    display: table;
+}
+#div1{
+    display: none;
+}
+div:hover #div1{
+    display: block;
+}
+#div2{
+    display: none;
+}
+#p:hover #div2{
+    display: block;
+}

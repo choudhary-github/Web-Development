@@ -1,0 +1,26 @@
+.container{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    background-color: lightcoral;
+    flex-wrap: wrap;
+    /* to give direction to the row */
+    flex-direction: row;
+    /* how items within a row are aligned in order */
+    justify-content:space-around;
+    /* align items within the row perpendicularly */
+    align-items:flex-start;
+    /* how all the rows togather are aligned */
+    align-content:center;
+    
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    border: 1px dotted black;
+    display: inline-flex;
+    margin: 15px;
+    background-color: darkcyan;
+    text-align: center;
+}

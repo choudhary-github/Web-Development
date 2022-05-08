@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearFix</title>
+    <style>
+        .clearfix{
+            width: 50%;
+            border: 3px solid lightgreen;
+            padding-left: 8px;
+            padding-right: 8px;
+            overflow: auto;
+
+        }
+        .img{
+            width: 150px;
+            float: right;
+        }
+        div{
+            width: 50%;
+            border: 3px solid #4caf50;
+            padding: 5px;
+        }
+        .modernclear::after{
+            clear: both;
+            display: table;
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <h2>ClearFix</h2>
+    <div class="clearfix">
+    <img src="/test/media/pineapple.jpg" alt="pineapple" style="float: right;width: 150px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel earum optio nostrum accusantium, rem quos obcaecati error voluptas in quam quibusdam minus atque dolorem nobis. Nam soluta laudantium esse voluptas!</div>
+    <hr>
+    <h3>Without clearfix</h3>
+    <div>
+        <img class="img" src="/test/media/pineapple.jpg" alt="pineapple.jpg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis delectus illum voluptas omnis id doloremque ea eos quia dolore optio quos natus laboriosam asperiores nisi corrupti quaerat odio, ex neque!
+    </div><hr>
+    <h3 style="margin-top: 80px;">With ClearFix</h3>
+    <div class="modernclear">
+        <img class="img" src="/test/media/pineapple.jpg" alt="pineapple.jpg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis delectus illum voluptas omnis id doloremque ea eos quia dolore optio quos natus laboriosam asperiores nisi corrupti quaerat odio, ex neque!
+    </div>
+</body>
+</html>
