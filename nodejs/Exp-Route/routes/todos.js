@@ -1,5 +1,4 @@
-const route = require('express').Router
-
+const route = require('express').Router()
 let todos = [];
 
 route.get('/',(req,res)=>{
@@ -7,9 +6,9 @@ route.get('/',(req,res)=>{
 })
 
 route.post('/',(req,res)=>{
-    // todos.push({
-    //     task : req.body.task
-    // })
+    todos.push({
+        task : req.body.task
+    })
     res.send(todos)
 })
 
